@@ -13,8 +13,10 @@ Alumni Connect helps bridge the gap between current students and graduates by pr
  *Job postings and referrals
  *Event management (webinars, meetups)
  
-Tech Stack
-Frontend: HTML, CSS, JavaScript 
-Backend: Node.js / Python / Java 
-Database: MySQL / MongoDB
-Version Control: Git & GitHub
+
+Tech Stack:
+Frontend: React, HTML, CSS, Tailwind CSS
+Backend: Node.js, Express.js
+Database: MySQL
+Authentication: JWT / Google Login
+Hosting & Deployment: Vercel or Netlify
