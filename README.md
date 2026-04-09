@@ -14,7 +14,7 @@ Alumni Connect helps bridge the gap between current students and graduates by pr
  *Event management (webinars, meetups)
  
 Tech Stack
-Frontend: HTML, CSS, JavaScript (or React if you're using it)
-Backend: Node.js / Python / Java (choose what you're using)
+Frontend: HTML, CSS, JavaScript 
+Backend: Node.js / Python / Java 
 Database: MySQL / MongoDB
 Version Control: Git & GitHub
