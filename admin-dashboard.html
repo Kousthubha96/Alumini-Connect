@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard | Alumni Connect</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<div class="dashboard-shell">
+
+  <aside class="sidebar">
+    <h2 class="logo">Alumni Connect</h2>
+    <nav>
+      <a href="user-dashboard.html" class="active">Dashboard</a>
+      <a href="alumni.html">Alumni</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="events.html">Events</a>
+      <a href="messages.html">Messages</a>
+      <a href="settings.html">Settings</a>
+    </nav>
+  </aside>
+
+  <main class="dashboard-main">
+
+    <header class="dashboard-header">
+      <h1 id="welcome-text">Welcome 👋</h1>
+      <button class="logout-btn" onclick="logout()">Logout</button>
+    </header>
+
+    <section class="card-grid">
+      <div class="card">
+        <h3>Alumni</h3>
+        <p class="big-number">120+</p>
+      </div>
+
+      <div class="card">
+        <h3>Jobs</h3>
+        <p class="big-number">35</p>
+      </div>
+
+      <div class="card">
+        <h3>Events</h3>
+        <p class="big-number">5</p>
+      </div>
+    </section>
+
+    <section class="activity-section">
+      <h2>Recent Activity</h2>
+      <div class="activity-card">Rahul posted a job</div>
+      <div class="activity-card">Anita joined</div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+const user = localStorage.getItem("rememberedAdmin");
+if(user){
+  document.getElementById("welcome-text").innerText = "Welcome, " + user + " 👋";
+}
+
+function logout(){
+  localStorage.removeItem("rememberedAdmin");
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
