@@ -34,3 +34,14 @@ alumni-connect/
 │   ├── controllers/       # Route handlers (Business logic)
 │   ├── models/            # Database schemas
 │   └── routes/            # API endpoint definitions
+
+
+# Frontend (Client)
+1. Navigate to the client folder: `cd client`
+2. Install dependencies: `npm install`
+3. Run the development server: `npm run dev`
+
+# Project Structure
+- **client/src/pages**: Contains the brand-aligned Login and Register UI.
+- **client/src/App.jsx**: Handles frontend routing.
+- **server/**: Scaffolding for Node.js/Express backend.
