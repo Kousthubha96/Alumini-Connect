@@ -20,3 +20,17 @@ Backend: Node.js, Express.js
 Database: MySQL
 Authentication: JWT / Google Login
 Hosting & Deployment: Vercel or Netlify
+
+
+# Project Structure
+alumni-connect/
+├── client/                # React Frontend
+│   ├── src/
+│   │   ├── components/    # Reusable UI components
+│   │   ├── pages/         # Full page views (Login, Register, etc.)
+│   │   └── services/      # API communication logic
+├── server/                # Node.js/Express Backend
+│   ├── config/            # Database connection
+│   ├── controllers/       # Route handlers (Business logic)
+│   ├── models/            # Database schemas
+│   └── routes/            # API endpoint definitions
