@@ -63,3 +63,14 @@ npm install
 npm run dev
 
 Navigate to http://localhost:5173/login
+
+client/src
+  - /components: Reusable UI elements (Navbar, Footer).
+  - /pages: Main views (Login, Register).
+  - App.js: Main routing and global layout wrapper.
+
+  # Features Implemented
+- Responsive Navbar: Includes a mobile-friendly hamburger menu and brand-aligned styling (#2F5DAA).
+- Sticky Footer: Professional footer with social links and contact info, pinned to the bottom using Flexbox.
+- Global Layout: Every page is now automatically wrapped in the Navbar and Footer for a consistent user experience.
+- Frontend: React, Tailwind CSS v4, Vite, React Router DOM.
