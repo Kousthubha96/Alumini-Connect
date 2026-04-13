@@ -12,7 +12,7 @@ const Home = () => {
             Connecting Past, Present, and <span className="text-[#2F5DAA]">Future.</span>
           </h1>
           <p className="text-lg md:text-xl text-[#6B7280] max-w-lg mx-auto md:mx-0">
-            Join the exclusive network of GMIT alumni. Mentorship, career opportunities, and lifelong connections start here.
+            Join the exclusive network of GM alumni. Mentorship, career opportunities, and lifelong connections start here.
           </p>
           <div className="pt-4">
             <Link 
