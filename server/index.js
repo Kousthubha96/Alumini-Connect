@@ -27,6 +27,20 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'OK', message: 'Server is running' });
 });
 
+// Root endpoint for browser testing
+app.get('/', (req, res) => {
+  res.json({
+    message: 'Alumni Connect Backend API',
+    status: 'Running',
+    port: PORT,
+    endpoints: {
+      health: '/api/health',
+      alumni: '/api/alumni',
+      auth: '/api/auth'
+    }
+  });
+});
+
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
