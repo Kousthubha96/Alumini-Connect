@@ -1,76 +1,103 @@
-# Alumini-Connect
-Alumni Connect
-A web-based platform designed to connect students with alumni for mentorship, networking, and career opportunities.
+# Alumni Connect
 
-Overview
-Alumni Connect helps bridge the gap between current students and graduates by providing a space where they can interact, share experiences, and support each other's professional growth.
+A full-stack web application designed to connect students with alumni for mentorship, networking, and career opportunities.
 
- Features
- *User Registration & Login (Students & Alumni)
- *Search and filter alumni by domain, company, or location
- *Messaging system for communication
- *Alumni profiles with experience and achievements
- *Job postings and referrals
- *Event management (webinars, meetups)
- 
+---
 
-Tech Stack:
-Frontend: React, HTML, CSS, Tailwind CSS
-Backend: Node.js, Express.js
-Database: MySQL
-Authentication: JWT / Google Login
-Hosting & Deployment: Vercel or Netlify
+## Overview
 
+Alumni Connect bridges the gap between current students and graduates by providing a platform for interaction, knowledge sharing, and professional growth.
 
-# Project Structure
+---
+
+## Features
+
+- User Registration and Login (Students and Alumni)
+- Search and filter alumni by domain, company, or location
+- Messaging system for communication
+- Alumni profiles with experience and achievements
+- Job postings and referrals
+- Event management (webinars, meetups)
+
+---
+
+## Tech Stack
+
+**Frontend:** React, Tailwind CSS, Vite, React Router DOM  
+**Backend:** Node.js, Express.js  
+**Database:** MySQL  
+**Authentication:** JWT, Google OAuth
+
+---
+
+## Project Structure
+
+```
 alumni-connect/
-├── client/                # React Frontend
+├── client/                # React frontend
 │   ├── src/
 │   │   ├── components/    # Reusable UI components
-│   │   ├── pages/         # Full page views (Login, Register, etc.)
+│   │   ├── pages/         # Pages (Login, Register, etc.)
 │   │   └── services/      # API communication logic
-├── server/                # Node.js/Express Backend
-│   ├── config/            # Database connection
-│   ├── controllers/       # Route handlers (Business logic)
+│
+├── server/                # Node.js/Express backend
+│   ├── config/            # Database configuration
+│   ├── controllers/       # Business logic
 │   ├── models/            # Database schemas
-│   └── routes/            # API endpoint definitions
+│   └── routes/            # API routes
+```
 
+---
 
-# Frontend (Client)
-1. Navigate to the client folder: `cd client`
-2. Install dependencies: `npm install`
-3. Run the development server: `npm run dev`
+## Setup Instructions
 
-# Project Structure
-- **client/src/pages**: Contains the brand-aligned Login and Register UI.
-- **client/src/App.jsx**: Handles frontend routing.
-- **server/**: Scaffolding for Node.js/Express backend.
+### Clone the repository
 
+```
+git clone https://github.com/your-username/alumni-connect.git
+cd alumni-connect
+```
 
-# Overview
-Successfully implemented the project folder structure and the initial Authentication UI (Login/Register) following the project's design system.
-Key Changes
-Architecture: Set up a clean client/server directory structure.
-UI Development: Created responsive Login and Registration pages using Tailwind CSS v4 and the specified hex color palette (#2F5DAA, #3B6FD8, etc.).
-Environment: Initialized Vite as the build tool and configured PostCSS/Tailwind for a working local development environment.
-Routing: Implemented react-router-dom for seamless navigation between auth pages.
+---
 
-# how to Test the user login and register
-cd client
+### Backend setup
 
+```
 npm install
+node server/index.js
+```
 
+The backend server will run on:
+http://localhost:5000
+
+---
+
+### Frontend setup
+
+```
+cd client
+npm install
 npm run dev
+```
 
-Navigate to http://localhost:5173/login
+The frontend will run on:
+http://localhost:5173
 
-client/src
-  - /components: Reusable UI elements (Navbar, Footer).
-  - /pages: Main views (Login, Register).
-  - App.js: Main routing and global layout wrapper.
+---
 
-  # Features Implemented
-- Responsive Navbar: Includes a mobile-friendly hamburger menu and brand-aligned styling (#2F5DAA).
-- Sticky Footer: Professional footer with social links and contact info, pinned to the bottom using Flexbox.
-- Global Layout: Every page is now automatically wrapped in the Navbar and Footer for a consistent user experience.
-- Frontend: React, Tailwind CSS v4, Vite, React Router DOM.
+## API Endpoints
+
+- GET /api/health
+  Returns server status
+
+- GET /api/version
+  Returns application version
+
+---
+
+## Testing
+
+- Frontend: http://localhost:5173/login
+- Backend: http://localhost:5000/api/health
+
+---
