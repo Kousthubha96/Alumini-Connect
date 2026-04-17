@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import EventManagement from '../components/EventManagement';
 
 const AdminDashboard = () => {
+  const [activeTab, setActiveTab] = useState('alumni');
   const [alumni, setAlumni] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -169,12 +171,40 @@ const AdminDashboard = () => {
       </nav>
 
       <div className="max-w-6xl mx-auto p-6">
+        {/* Tab Navigation */}
+        <div className="mb-6 flex gap-4 border-b border-gray-300">
+          <button
+            onClick={() => setActiveTab('alumni')}
+            className={`px-6 py-3 font-semibold transition-all border-b-2 ${
+              activeTab === 'alumni'
+                ? 'border-[#3B6FD8] text-[#3B6FD8]'
+                : 'border-transparent text-gray-600 hover:text-gray-900'
+            }`}
+          >
+            Alumni Management
+          </button>
+          <button
+            onClick={() => setActiveTab('events')}
+            className={`px-6 py-3 font-semibold transition-all border-b-2 ${
+              activeTab === 'events'
+                ? 'border-[#3B6FD8] text-[#3B6FD8]'
+                : 'border-transparent text-gray-600 hover:text-gray-900'
+            }`}
+          >
+            Event Management
+          </button>
+        </div>
+
         {/* Error Message */}
         {error && (
           <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6">
             {error}
           </div>
         )}
+
+        {/* Alumni Tab Content */}
+        {activeTab === 'alumni' && (
+          <div>
 
         {/* Header Actions */}
         <div className="flex justify-between items-center mb-6">
@@ -363,7 +393,16 @@ const AdminDashboard = () => {
               No alumni found. Click "Add New Alumni" to get started.
             </div>
           )}
+          </div>
         </div>
+          )}
+
+        {/* Events Tab Content */}
+        {activeTab === 'events' && (
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <EventManagement />
+          </div>
+        )}
       </div>
     </div>
   );

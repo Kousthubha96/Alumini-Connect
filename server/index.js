@@ -17,6 +17,10 @@ app.use(express.urlencoded({ extended: true }));
 const alumniRoutes = require('./routes/alumni');
 app.use('/api/alumni', alumniRoutes);
 
+// Event routes
+const eventRoutes = require('./routes/events');
+app.use('/api/events', eventRoutes);
+
 // Auth routes
 const authRoutes = require('./routes/auth');
 app.use('/api', authRoutes);
