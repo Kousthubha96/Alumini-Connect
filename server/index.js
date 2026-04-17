@@ -1,7 +1,6 @@
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
-const mysql = require('mysql2/promise');
 
 // Load environment variables
 dotenv.config();
@@ -18,8 +17,9 @@ app.use(express.urlencoded({ extended: true }));
 const alumniRoutes = require('./routes/alumni');
 app.use('/api/alumni', alumniRoutes);
 
-// Auth routes (placeholder for now)
+// Auth routes
 const authRoutes = require('./routes/auth');
+app.use('/api', authRoutes);
 app.use('/api/auth', authRoutes);
 
 // Health check
