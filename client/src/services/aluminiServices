@@ -1,0 +1,4 @@
+import API from './api';
+
+export const getAllAlumni = () => API.get('/alumni');
+export const getAlumniById = (id) => API.get(`/alumni/${id}`);
