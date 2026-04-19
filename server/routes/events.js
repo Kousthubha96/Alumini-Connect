@@ -18,3 +18,28 @@ router.put('/:id', eventController.updateEvent);
 router.delete('/:id', eventController.deleteEvent);
 
 module.exports = router;
+
+const express = require("express");
+const router = express.Router();
+
+// Dummy data (replace with DB later)
+const events = [
+  {
+    id: 1,
+    title: "Tech Talk 2026",
+    description: "Latest trends in AI",
+    date: "2026-05-10",
+  },
+  {
+    id: 2,
+    title: "Alumni Meetup",
+    description: "Reconnect with alumni",
+    date: "2026-04-25",
+  },
+];
+
+router.get("/", (req, res) => {
+  res.json(events);
+});
+
+module.exports = router;
